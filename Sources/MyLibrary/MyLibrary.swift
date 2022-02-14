@@ -9,12 +9,12 @@ public func indiceEn<Element:Equatable>(valor:Element, array:[Element]) -> Int? 
     return nil
 }
 
-enum Gender:String, Codable {
+public enum Gender:String, Codable {
     case male = "Male"
     case female = "Female"
 }
 
-struct Empleado:Codable {
+public struct Empleado:Codable {
     let id:Int
     let username:String
     let first_name:String
@@ -27,7 +27,7 @@ struct Empleado:Codable {
     let avatar:URL
 }
 
-func getEmpleados() -> [Empleado] {
+public func getEmpleados() -> [Empleado] {
     guard let url = Bundle.module.url(forResource: "EmpleadosData", withExtension: "json") else {
         return []
     }
